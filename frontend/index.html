@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConversAI - AI Driven Digital Human</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 ConversAI</h1>
+            <p>AI Driven Digital Human - Voice Conversation</p>
+        </header>
+
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <strong>ConversAI:</strong> Hello! I'm your AI conversation partner. Click the microphone button below to start talking with me!
+                    </div>
+                    <div class="message-time" id="bot-time-0"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="mic-container">
+                <button id="mic-button" class="mic-button" title="Click to start/stop recording">
+                    <span class="mic-icon">🎤</span>
+                </button>
+                <div id="mic-status" class="mic-status">Click to start talking</div>
+            </div>
+            
+            <div class="transcript-container">
+                <div id="interim-transcript" class="interim-transcript"></div>
+            </div>
+        </div>
+
+        <div class="fallback-container" id="fallback-container" style="display: none;">
+            <h3>Voice not supported - Text Input Mode</h3>
+            <div class="text-input-container">
+                <input type="text" id="text-input" placeholder="Type your message here..." />
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <span>AI is thinking...</span>
+        </div>
+
+        <footer>
+            <div class="session-info">
+                <span>Session: <span id="session-id">Loading...</span></span>
+            </div>
+            <div class="instructions">
+                <p>💡 <strong>Tips:</strong> Speak clearly into your microphone. The AI will respond both in text and voice.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
